@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">    
+    <title>Fogo</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid #000;                       
+        }
+        td{
+            width: 50px;
+            height: 50px;            
+            border: 1px solid #000;
+            text-align: center;
+            vertical-align:center;
+            font-family: monospace;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .pixel-index{
+            font-size: 10px;
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            color: #999;
+        }
+        td.pixel{
+            width: 4px;
+            height: 4px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!--dificultadades: 
+        valores estavam aparecendo como NaN, quando se atualizava o valor no index. 
+        Tinha observado que as chamas estavam lentas. Foi então que identifiquei que era devido o uso do console.log()
+
+        https://github.com/filipedeschamps/doom-fire-algorithm/blob/master/playground/1st-implementation-with-tables/fire.js
+        -->
+    <div id="canvasFogo">
+       
+    </div>
+    <div>
+        <input type="button" value="Extintor" onclick="apagaFogo()">
+        <input type="button" value="Acende Fogo" onclick="criaFonteDeFogo()">
+
+    </div>
+    <script src="fogo.js"></script>
+</body>
+</html>
